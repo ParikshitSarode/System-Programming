@@ -1,0 +1,261 @@
+ Performance counter stats for 'ls':
+
+              7.52 msec task-clock                #    0.784 CPUs utilized          
+                 0      context-switches          #    0.000 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+               100      page-faults               #    0.013 M/sec                  
+         41,44,841      cycles                    #    0.551 GHz                      (29.21%)
+         13,81,319      instructions              #    0.33  insn per cycle           (82.17%)
+          3,02,998      branches                  #   40.274 M/sec                  
+            20,993      branch-misses             #    6.93% of all branches          (70.79%)
+
+       0.009590942 seconds time elapsed
+
+       0.004847000 seconds user
+       0.004847000 seconds sys
+
+
+fibonnaci(0) = 0
+fibonnaci(1) = 1
+fibonnaci(2) = 1
+fibonnaci(3) = 2
+fibonnaci(4) = 3
+fibonnaci(5) = 5
+fibonnaci(6) = 8
+fibonnaci(7) = 13
+fibonnaci(8) = 21
+fibonnaci(9) = 34
+fibonnaci(10) = 55
+fibonnaci(11) = 89
+fibonnaci(12) = 144
+fibonnaci(13) = 233
+fibonnaci(14) = 377
+fibonnaci(15) = 610
+fibonnaci(16) = 987
+fibonnaci(17) = 1597
+fibonnaci(18) = 2584
+fibonnaci(19) = 4181
+fibonnaci(20) = 6765
+fibonnaci(21) = 10946
+fibonnaci(22) = 17711
+fibonnaci(23) = 28657
+fibonnaci(24) = 46368
+fibonnaci(25) = 75025
+fibonnaci(26) = 121393
+fibonnaci(27) = 196418
+fibonnaci(28) = 317811
+fibonnaci(29) = 514229
+fibonnaci(30) = 832040
+fibonnaci(31) = 1346269
+fibonnaci(32) = 2178309
+fibonnaci(33) = 3524578
+fibonnaci(34) = 5702887
+fibonnaci(35) = 9227465
+fibonnaci(36) = 14930352
+fibonnaci(37) = 24157817
+fibonnaci(38) = 39088169
+fibonnaci(39) = 63245986
+fibonnaci(40) = 102334155
+fibonnaci(41) = 165580141
+fibonnaci(42) = 267914296
+
+
+
+Trace command -
+
+
+
+         ? (         ): a.out/5568  ... [continued]: execve())                                           = 0
+     0.191 ( 0.013 ms): a.out/5568 brk()                                                                 = 0x55dc070e3000
+     0.218 ( 0.007 ms): a.out/5568 arch_prctl(option: 0x3001, arg2: 0x7ffeb0753aa0)                      = -1 EINVAL (Invalid argument)fibonnaci(0) = 0
+
+fibonnaci(1) = 1
+fibonnaci(2) = 1
+fibonnaci(3) = 2
+fibonnaci(4) = 3
+fibonnaci(5) = 5
+fibonnaci(6) = 8
+fibonnaci(7) = 13
+fibonnaci(8) = 21
+fibonnaci(9) = 34
+fibonnaci(10) = 55
+fibonnaci(11) = 89
+fibonnaci(12) = 144
+fibonnaci(13) = 233
+fibonnaci(14) = 377
+fibonnaci(15) = 610
+fibonnaci(16) = 987
+fibonnaci(17) = 1597
+fibonnaci(18) = 2584
+     0.337 ( 0.036 ms): fibonnaci(19) = 4181
+a.out/5568 access(filename: 0x559119e0, mode: R)                                 = -1 ENOENT (No such file or directory)
+fibonnaci(20) = 6765
+     0.415 ( 0.040 ms): fibonnaci(21) = 10946
+a.out/5568 openat(dfd: CWD, filename: 0x5590eb80, flags: RDONLY|CLOEXEC)         = 3
+     0.469 ( 0.015 ms): a.out/5568 fstat(fd: 3, statbuf: 0x7ffeb0752ca0)                                 = 0
+fibonnaci(22) = 17711
+     0.494 ( 0.027 ms): a.out/5568 mmap(len: 59876, prot: READ, flags: PRIVATE, fd: 3)                   = 0x7fb9558da000
+     0.534 ( 0.007 ms): a.out/5568 close(fd: 3)                                                          = 0
+     0.581 ( 0.039 ms): a.out/5568 openat(dfd: CWD, filename: 0x55918e10, flags: RDONLY|CLOEXEC)         = 3
+     0.635 ( 0.017 ms): a.out/5568 read(fd: 3, buf: 0x7ffeb0752e48, count: 832)                          = 832
+     0.665 ( 0.012 ms): a.out/5568 pread64(fd: 3, buf: 0x7ffeb0752a60, count: 784, pos: 64)              = 784
+     0.687 ( 0.010 ms): a.out/5568 pread64(fd: 3, buf: 0x7ffeb0752a30, count: 32, pos: 848)              = 32
+     0.708 ( 0.010 ms): a.out/5568 pread64(fd: 3, buf: 0x7ffeb07529e0, count: 68, pos: 880)              = 68
+     0.729 ( 0.010 ms): a.out/5568 fstat(fd: 3, statbuf: 0x7ffeb0752cf0)                                 = 0
+     0.750 ( 0.021 ms): a.out/5568 mmap(len: 8192, prot: READ|WRITE, flags: PRIVATE|ANONYMOUS)           = 0x7fb9558d8000
+     0.809 ( 0.016 ms): a.out/5568 pread64(fd: 3, buf: 0x7ffeb0752940, count: 784, pos: 64)              = 784
+     0.839 ( 0.010 ms): a.out/5568 pread64(fd: 3, buf: 0x7ffeb0752620, count: 32, pos: 848)              = 32
+     0.861 ( 0.011 ms): a.out/5568 pread64(fd: 3, buf: 0x7ffeb0752600, count: 68, pos: 880)              = 68
+     0.884 ( 0.030 ms): a.out/5568 mmap(len: 2036952, prot: READ, flags: PRIVATE|DENYWRITE, fd: 3)       = 0x7fb9556e6000
+fibonnaci(23) = 28657
+     0.926 ( 0.046 ms): a.out/5568 mprotect(start: 0x7fb95570b000, len: 1847296)                         = 0
+     0.985 ( 0.055 ms): a.out/5568 mmap(addr: 0x7fb95570b000, len: 1540096, prot: READ|EXEC, flags: PRIVATE|FIXED|DENYWRITE, fd: 3, off: 0x25000) = 0x7fb95570b000
+     1.055 ( 0.042 ms): a.out/5568 mmap(addr: 0x7fb955883000, len: 303104, prot: READ, flags: PRIVATE|FIXED|DENYWRITE, fd: 3, off: 0x19d000) = 0x7fb955883000
+     1.111 ( 0.044 ms): a.out/5568 mmap(addr: 0x7fb9558ce000, len: 24576, prot: READ|WRITE, flags: PRIVATE|FIXED|DENYWRITE, fd: 3, off: 0x1e7000) = 0x7fb9558ce000
+     1.199 ( 0.040 ms): a.out/5568 mmap(addr: 0x7fb9558d4000, len: 13528, prot: READ|WRITE, flags: PRIVATE|FIXED|ANONYMOUS) = 0x7fb9558d4000
+     1.293 ( 0.010 ms): a.out/5568 close(fd: 3)                                                          = 0
+     1.661 ( 0.012 ms): a.out/5568 arch_prctl(option: SET_FS, arg2: 0x7fb9558d9540)                      = 0
+     2.039 ( 0.044 ms): a.out/5568 mprotect(start: 0x7fb9558ce000, len: 12288, prot: READ)               = 0
+     2.108 ( 0.033 ms): a.out/5568 mprotect(start: 0x55dc06137000, len: 4096, prot: READ)                = 0
+     2.244 ( 0.043 ms): a.out/5568 mprotect(start: 0x7fb955916000, len: 4096, prot: READ)                = 0
+     2.302 ( 0.054 ms): a.out/5568 munmap(addr: 0x7fb9558da000, len: 59876)                              = 0
+     2.783 ( 0.017 ms): a.out/5568 fstat(fd: 1</dev/pts/0>, statbuf: 0x7ffeb07532b0)                     = 0
+     3.120 ( 0.012 ms): a.out/5568 brk()                                                                 = 0x55dc070e3000
+     3.215 ( 0.025 ms): a.out/5568 brk(brk: 0x55dc07104000)                                              = 0x55dc07104000
+     3.383 ( 0.100 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 17)              = 17
+     3.564 ( 0.087 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 17)              = 17
+     3.713 ( 0.084 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 17)              = 17
+     3.859 ( 0.082 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 17fibonnaci(24) = 46368
+)              = 17
+     4.005 ( 0.140 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 17)              = 17
+     4.171 ( 0.043 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 17)              = 17
+     4.242 ( 0.031 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 17)              = 17
+     4.299 ( 0.035 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 18)              = 18
+     4.360 ( 0.036 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 18)              = 18
+     4.422 ( 0.036 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 18)              = 18
+     4.484 ( 0.035 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 19)              = 19
+     4.546 ( 0.034 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 19)              = 19
+     4.611 ( 0.035 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 20)              = 20
+     4.681 ( 0.034 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 20)              = 20
+     4.753 ( 0.031 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 20)              = 20
+     4.842 ( 0.032 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 20)              = 20
+     4.941 ( 0.034 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 20)              = 20
+     5.063 ( 0.035 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 21)              = 21
+     5.224 ( 0.039 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 21)              = 21
+     5.529 ( 0.035 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 21)              = 21
+     5.932 ( 0.033 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 21)              = 21
+     6.499 ( 0.037 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 22)              = 22
+     7.492 ( 0.033 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 22)              = 22
+     9.893 ( 0.033 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 22)              = 22
+    13.540 ( 0.046 ms): a.out/5568 fibonnaci(25) = 75025
+write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 22)              = 22
+    18.492 ( 0.042 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 22)              = 22
+fibonnaci(26) = 121393
+    25.252 ( 0.078 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 23)              = 23
+fibonnaci(27) = 196418
+    38.321 ( 0.122 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 23)              = 23
+fibonnaci(28) = 317811
+    50.366 ( 0.079 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 23)              = 23
+fibonnaci(29) = 514229
+    77.256 ( 0.057 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 23)              = 23
+fibonnaci(30) = 832040
+   105.117 ( 0.037 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 23)              = 23
+fibonnaci(31) = 1346269
+   150.038 ( 0.039 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 24)              = 24
+fibonnaci(32) = 2178309
+   222.005 ( 0.035 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 24)              = 24
+fibonnaci(33) = 3524578
+   338.184 ( 0.043 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 24)              = 24
+fibonnaci(34) = 5702887
+   525.681 ( 0.045 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 24)              = 24
+fibonnaci(35) = 9227465
+   828.352 ( 0.039 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 24)              = 24
+fibonnaci(36) = 14930352
+  1317.363 ( 0.070 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 25)              = 25
+fibonnaci(37) = 24157817
+  2108.741 ( 0.054 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 25)              = 25
+fibonnaci(38) = 39088169
+  3388.771 ( 0.033 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 25)              = 25
+fibonnaci(39) = 63245986
+  5457.798 ( 0.033 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 25)              = 25
+fibonnaci(40) = 102334155
+  8821.972 ( 0.030 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 26)              = 26
+fibonnaci(41) = 165580141
+ 14237.650 ( 0.030 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 26)              = 26
+fibonnaci(42) = 267914296
+ 22990.080 ( 0.051 ms): a.out/5568 write(fd: 1</dev/pts/0>, buf: 0x55dc070e32a0, count: 26)              = 26
+ 22990.184 (         ): a.out/5568 exit_group()                                                          = ?
+
+
+Inference - From perf it can be seen that as n increases, time increaese exponentially, so all the optimisation is to be done in the fibonacci function. The optimised code is attached with this document
+Perf for optimised code is also attached below.It can be seen there is significant difference between capture and wokenup time
+
+
+
+fibonnaci(0) = 0
+fibonnaci(1) = 1
+fibonnaci(2) = 1
+fibonnaci(3) = 2
+fibonnaci(4) = 3
+fibonnaci(5) = 5
+fibonnaci(6) = 8
+fibonnaci(7) = 13
+fibonnaci(8) = 21
+fibonnaci(9) = 34
+fibonnaci(10) = 55
+fibonnaci(11) = 89
+fibonnaci(12) = 144
+fibonnaci(13) = 233
+fibonnaci(14) = 377
+fibonnaci(15) = 610
+fibonnaci(16) = 987
+fibonnaci(17) = 1597
+fibonnaci(18) = 2584
+fibonnaci(19) = 4181
+fibonnaci(20) = 6765
+fibonnaci(21) = 10946
+fibonnaci(22) = 17711
+fibonnaci(23) = 28657
+fibonnaci(24) = 46368
+fibonnaci(25) = 75025
+fibonnaci(26) = 121393
+fibonnaci(27) = 196418
+fibonnaci(28) = 317811
+fibonnaci(29) = 514229
+fibonnaci(30) = 832040
+fibonnaci(31) = 1346269
+fibonnaci(32) = 2178309
+fibonnaci(33) = 3524578
+fibonnaci(34) = 5702887
+fibonnaci(35) = 9227465
+fibonnaci(36) = 14930352
+fibonnaci(37) = 24157817
+fibonnaci(38) = 39088169
+fibonnaci(39) = 63245986
+fibonnaci(40) = 102334155
+fibonnaci(41) = 165580141
+fibonnaci(42) = 267914296
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0.017 MB perf.data (36 samples) ]
+
+
+
+
+
+ Performance counter stats for 'ls':
+
+              8.22 msec task-clock                #    0.696 CPUs utilized          
+                 5      context-switches          #    0.608 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+               101      page-faults               #    0.012 M/sec                  
+         38,55,558      cycles                    #    0.469 GHz                      (27.48%)
+         12,92,896      instructions              #    0.34  insn per cycle           (75.53%)
+          3,20,085      branches                  #   38.949 M/sec                  
+            22,987      branch-misses             #    7.18% of all branches          (72.52%)
+
+       0.011815907 seconds time elapsed
+
+       0.000000000 seconds user
+       0.010474000 seconds sys
+
+
